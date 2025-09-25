@@ -17,7 +17,7 @@ title: 咏歌与凯旋 # the main title
 
 tagline: 超有用的知识总结 # it will display as the subtitle
 
-description: >- # used by seo meta and the atom feed
+description: # used by seo meta and the atom feed
   要想一片土地不长杂草，最好的做法是种上鲜花。
 
 # Fill in the protocol & hostname for your site.
@@ -58,7 +58,7 @@ webmaster_verifications:
 # Web Analytics Settings
 analytics:
   google:
-    id: # fill in your Google Analytics ID
+    id: G-BFZZHSES54 # fill in your Google Analytics ID
   goatcounter:
     id: # fill in your GoatCounter ID
   umami:
