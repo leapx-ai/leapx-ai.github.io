@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Spec System（规格系统）"
-date: 2026-02-22 21:13:08 +0800
+date: 2026-03-10 21:13:08 +0800
 categories: [SDD]
 tags: [SDD]
 ---
