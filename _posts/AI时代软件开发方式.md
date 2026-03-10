@@ -1,0 +1,128 @@
+---
+layout: post
+title: "AI时代的软件开发方式"
+date: 2026-02-22 21:13:08 +0800
+categories: [SDD]
+tags: [SDD]
+---
+
+# 开篇 - AI时代的软件开发方式
+
+从 Code Driven 转变为 SDD Driven
+
+**Spec-Driven Development** 的核心思想是：
+
+```text
+系统由规格驱动，而不是由代码驱动
+```
+
+传统开发：
+
+```text
+需求 → 设计 → 写代码 → 系统
+```
+
+SDD：
+
+```text
+Spec → AI实现 → 系统
+```
+
+---
+
+## 我们需要做
+
+#### 思维的转变 - 认知
+
+1. 代码不再是唯一资产
+
+```
+  AI时代核心资产：
+    Prompt
+    Context
+    Architecture
+```
+
+2. 从 Code Writer 变为 Code Director
+
+#### 流程的转变 - 实践
+
+角色分工围绕编码生产，传统软件生产链条：
+
+```
+需求 → 设计 → 编码 → 测试 → 发布
+```
+
+Vibecoding模式
+
+```
+需求 → 任务定义（Spec） → AI生成 → [验证 + 约束] → 上线
+```
+
+#### 组织的转变 - 组织
+
+AI的使用原则
+
+```
+  AI辅助开发
+  必须Review
+```
+
+团队角色
+
+```
+传统团队：
+  PM、TL、Engineers、QA
+AI团队：
+  Product、Architect、AI Engineer、Software Engineer
+```
+
+团队能力
+
+```
+  Prompt Engineering
+  Context Engineering
+  AI Code Review
+```
+
+新的指标
+
+```
+  代码量 -> 交付速度，缺陷率等
+```
+
+---
+
+## vibecoding （个人）
+
+- 自然语言驱动 AI 编码
+- 个人开发
+
+---
+
+## Spec-Driven Development（SDD） （组织）
+
+工程化 Vibecoding
+
+#### 1.代码生成能力突破
+
+大型模型已经能稳定生成：
+
+- API
+- CRUD
+- 前后端逻辑
+- 测试代码
+
+#### 2. 代码生产成本接近零
+
+#### 3.Repo级理解能力
+
+AI已经可以理解：
+
+```text
+整个代码库结构
+跨文件依赖
+模块关系
+```
+
+---
