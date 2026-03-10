@@ -162,17 +162,16 @@ cancelOrder
 Order
 
 fields:
-id
-user_id
-product_id
-status
-created_at
+  id
+  user_id
+  product_id
+  status
+  created_at
 
 status values:
-
-pending
-paid
-cancelled
+  pending
+  paid
+  cancelled
 
 ## Dependencies
 
@@ -223,25 +222,21 @@ Context:
 系统为 Node.js REST API。
 
 Inputs:
-
 user_id: string
 product_id: string
 
 Outputs:
-
 {
   order_id: string
   status: "pending"
 }
 
 Constraints:
-
 必须检查库存
 订单默认状态为 pending
 必须使用 OrderService
 
 Non-Goals:
-
 不实现支付逻辑
 不实现订单取消
 ```
@@ -381,16 +376,16 @@ Spec：
 
 ```text
 Goal:
-实现 cancelOrder API
+  实现 cancelOrder API
 
 Inputs:
-order_id
+  order_id
 
 Outputs:
-status = cancelled
+  status = cancelled
 
 Constraints:
-只能取消 pending 状态订单
+  只能取消 pending 状态订单
 ```
 
 AI再次生成代码。

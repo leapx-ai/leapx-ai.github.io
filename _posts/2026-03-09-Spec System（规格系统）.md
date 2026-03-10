@@ -107,23 +107,23 @@ System Spec 定义 **整个系统的规则与结构**。
 System Spec
 
 系统目标：
-构建一个在线订单系统
+  构建一个在线订单系统
 
 核心模块：
-User
-Order
-Payment
-Inventory
+  User
+  Order
+  Payment
+  Inventory
 
 架构：
-API Service
-Worker
-Database
+  API Service
+  Worker
+  Database
 
 技术栈：
-Node.js
-PostgreSQL
-Redis
+  Node.js
+  PostgreSQL
+  Redis
 ```
 
 ---
@@ -171,22 +171,22 @@ Module Spec 需要定义：
 Module: User
 
 Responsibility:
-用户注册、登录、认证
+  用户注册、登录、认证
 
 APIs:
-createUser
-loginUser
-getUser
+  createUser
+  loginUser
+  getUser
 
 Data Model:
-User
-id
-email
-password_hash
+  User
+  id
+  email
+  password_hash
 
 Dependencies:
-Database
-AuthService
+  Database
+  AuthService
 ```
 
 ---
@@ -235,21 +235,21 @@ Task Spec 是 **最底层规格**。
 
 ```text
 Goal:
-实现 createUser API
+  实现 createUser API
 
 Inputs:
-email
-password
+  email
+  password
 
 Outputs:
-user_id
+  user_id
 
 Constraints:
-使用 UserService
-密码必须 bcrypt 加密
+  使用 UserService
+  密码必须 bcrypt 加密
 
 Non-Goals:
-不实现邮箱验证
+  不实现邮箱验证
 ```
 
 ---
