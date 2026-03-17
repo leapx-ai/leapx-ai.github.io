@@ -272,9 +272,13 @@ article.px-1 > header {
 }
 
 #sidebar {
+  align-items: stretch !important;
+  padding: 1.4rem 1rem 1rem;
+
   .profile-wrapper {
+    margin: 0 0 1rem;
     width: 100%;
-    padding: 1.4rem 1.25rem 1.2rem;
+    padding: 1.15rem 1.1rem 1rem;
     border: 1px solid var(--leapx-card-border);
     border-radius: 1.4rem;
     background:
@@ -283,7 +287,7 @@ article.px-1 > header {
   }
 
   .brand-mark {
-    margin-bottom: 0.75rem;
+    margin-bottom: 0.55rem;
     color: var(--link-color);
     font-size: 0.72rem;
     font-weight: 700;
@@ -292,47 +296,50 @@ article.px-1 > header {
   }
 
   .site-title {
-    margin-top: 1rem;
-    font-size: 1.6rem;
+    margin-top: 0.85rem;
+    font-size: 1.45rem;
     letter-spacing: -0.04em;
-    line-height: 1.02;
+    line-height: 1.05;
   }
 
   .site-subtitle {
-    margin-top: 0.6rem;
+    margin-top: 0.5rem;
     color: var(--heading-color);
     font-style: normal;
     font-weight: 600;
-    line-height: 1.5;
+    line-height: 1.4;
   }
 
   .site-intro {
-    margin-top: 0.8rem;
+    margin-top: 0.7rem;
     color: var(--text-muted-color);
-    font-size: 0.96rem;
-    line-height: 1.65;
+    font-size: 0.92rem;
+    line-height: 1.55;
   }
 
   nav {
-    margin-top: 1.25rem;
-    padding: 0.15rem 0;
+    margin-top: 0.35rem;
+    padding: 0;
   }
 
   .sidebar-section-label {
-    margin: 0 0 0.7rem;
+    margin: 0 0 0.55rem;
     color: var(--text-muted-color);
-    font-size: 0.72rem;
+    font-size: 0.68rem;
     font-weight: 700;
-    letter-spacing: 0.18em;
+    letter-spacing: 0.16em;
     text-transform: uppercase;
   }
 
   .nav {
-    gap: 0.35rem;
+    margin-bottom: 0;
+    gap: 0.15rem;
   }
 
   .nav-item {
     width: 100%;
+    padding-left: 0;
+    padding-right: 0;
   }
 
   .nav-link {
@@ -340,11 +347,21 @@ article.px-1 > header {
     align-items: center;
     gap: 0.9rem;
     width: 100%;
-    padding: 0.85rem 1rem;
+    padding: 0.72rem 0.9rem;
     border: 1px solid transparent;
     border-radius: 0.95rem;
     font-weight: 600;
     letter-spacing: 0.02em;
+
+    i {
+      margin-right: 0;
+      font-size: 1rem;
+      opacity: 0.9;
+    }
+
+    span {
+      font-size: 0.92rem;
+    }
   }
 
   .nav-item.active .nav-link,
@@ -354,10 +371,14 @@ article.px-1 > header {
   }
 
   .sidebar-footer {
-    padding-top: 1rem;
+    margin-top: auto;
+    padding-top: 0.85rem;
   }
 
   .sidebar-bottom {
+    padding-left: 0;
+    padding-right: 0;
+    margin-bottom: 0;
     gap: 0.35rem;
   }
 
@@ -381,6 +402,10 @@ article.px-1 > header {
 }
 
 @media (max-width: 768px) {
+  #sidebar {
+    padding: 1rem 0.9rem 0.9rem;
+  }
+
   .home-hero {
     padding: 1.5rem 1.1rem;
     border-radius: 1.2rem;
