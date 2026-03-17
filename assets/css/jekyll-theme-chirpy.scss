@@ -58,7 +58,6 @@ main[aria-label='Main Content'] {
       max-width: var(--leapx-reading-width);
     }
 
-    > .table-wrapper,
     > .footnotes,
     > .highlighter-rouge,
     > div.highlighter-rouge,
@@ -67,6 +66,24 @@ main[aria-label='Main Content'] {
     > ul,
     > ol {
       max-width: none;
+    }
+
+    > .table-wrapper,
+    > hr {
+      max-width: var(--leapx-reading-width);
+    }
+
+    > .table-wrapper {
+      overflow-x: auto;
+    }
+
+    > .table-wrapper > table {
+      min-width: 100%;
+    }
+
+    hr {
+      margin-top: 2rem;
+      margin-bottom: 2rem;
     }
 
     p,
@@ -446,10 +463,6 @@ article.px-1 > header {
     max-width: 100%;
   }
 
-  body:has(main > article[data-toc]) #panel-wrapper {
-    display: none !important;
-  }
-
   body:has(main > article[data-toc]) article.px-1 {
     max-width: 980px;
     margin: 0 auto;
@@ -617,6 +630,28 @@ article.px-1 > header {
 
   body:has(main > article[data-toc]) #related-posts .card-body {
     padding: 1.1rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  body:has(main > article[data-toc]) main[aria-label='Main Content'] {
+    flex: 0 0 74%;
+    width: 74%;
+    max-width: 74%;
+  }
+
+  body:has(main > article[data-toc]) #panel-wrapper {
+    display: block !important;
+    flex: 0 0 26%;
+    max-width: 26%;
+  }
+
+  body:has(main > article[data-toc]) #panel-wrapper .access {
+    margin-top: 1.5rem;
+  }
+
+  body:has(main > article[data-toc]) #toc-wrapper {
+    top: 5rem;
   }
 }
 
