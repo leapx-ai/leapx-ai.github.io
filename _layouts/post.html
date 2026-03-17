@@ -180,36 +180,3 @@ script_includes:
   </div>
   <!-- div.post-tail-wrapper -->
 </article>
-
-<script type="module">
-  import mermaid from "https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs";
-
-  mermaid.initialize({
-    startOnLoad: false,
-    theme: "default",
-  });
-
-  // Wait for DOM to be ready
-  document.addEventListener("DOMContentLoaded", async function () {
-    // Find all mermaid code blocks and render them
-    const mermaidBlocks = document.querySelectorAll(
-      "pre code.language-mermaid",
-    );
-
-    if (mermaidBlocks.length > 0) {
-      // Create mermaid containers for each block
-      mermaidBlocks.forEach((element) => {
-        const graphDefinition = element.textContent;
-        const graphContainer = document.createElement("div");
-        graphContainer.className = "mermaid";
-        graphContainer.textContent = graphDefinition;
-        const pre = element.parentElement;
-        pre.parentNode.insertBefore(graphContainer, pre.nextSibling);
-        pre.style.display = "none";
-      });
-
-      // Render all mermaid graphs
-      await mermaid.run();
-    }
-  });
-</script>
