@@ -274,12 +274,14 @@ article.px-1 > header {
 #sidebar {
   align-items: stretch !important;
   padding: 1.2rem 0.95rem 0.9rem;
+  text-align: left;
 
   #avatar {
     display: none;
   }
 
   .profile-wrapper {
+    align-items: flex-start;
     margin: 0 0 0.85rem;
     width: 100%;
     padding: 0.15rem 0.2rem 0.45rem;
@@ -325,6 +327,7 @@ article.px-1 > header {
   nav {
     margin-top: 0.1rem;
     padding: 0;
+    align-items: stretch;
   }
 
   .sidebar-section-label {
@@ -383,6 +386,7 @@ article.px-1 > header {
   .sidebar-footer {
     margin-top: auto;
     padding-top: 0.7rem;
+    text-align: left;
   }
 
   .sidebar-bottom {
@@ -418,6 +422,204 @@ article.px-1 > header {
   }
 }
 
+@media (min-width: 992px) {
+  body:has(main > article[data-toc]) #sidebar {
+    display: none !important;
+  }
+
+  body:has(main > article[data-toc]) #main-wrapper {
+    margin-left: 0 !important;
+  }
+
+  body:has(main > article[data-toc]) #main-wrapper > .container {
+    max-width: 1400px;
+  }
+
+  body:has(main > article[data-toc]) main[aria-label='Main Content'] {
+    flex: 0 0 100%;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  body:has(main > article[data-toc]) #tail-wrapper {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  body:has(main > article[data-toc]) #panel-wrapper {
+    display: none !important;
+  }
+
+  body:has(main > article[data-toc]) article.px-1 {
+    max-width: 980px;
+    margin: 0 auto;
+  }
+
+  body:has(main > article[data-toc]) #topbar-wrapper {
+    height: 3.5rem;
+    backdrop-filter: blur(14px);
+    border-bottom: 1px solid color-mix(in srgb, var(--main-border-color) 88%, transparent);
+    background: color-mix(in srgb, var(--main-bg) 82%, transparent);
+  }
+
+  body:has(main > article[data-toc]) #topbar {
+    max-width: 980px;
+    margin: 0 auto;
+    padding-left: 0.25rem;
+    padding-right: 0.25rem;
+  }
+
+  body:has(main > article[data-toc]) #breadcrumb {
+    font-size: 0.92rem;
+  }
+
+  body:has(main > article[data-toc]) article.px-1 > header {
+    margin-bottom: 2.6rem;
+    padding: 0.7rem 0 1.8rem;
+    border-bottom: 1px solid var(--main-border-color);
+  }
+
+  body:has(main > article[data-toc]) article.px-1 > header h1 {
+    max-width: 18ch;
+    margin-bottom: 0.75rem;
+    font-size: clamp(2.2rem, 4vw, 3.4rem);
+    line-height: 1.02;
+    letter-spacing: -0.05em;
+  }
+
+  body:has(main > article[data-toc]) article.px-1 > header .post-desc {
+    max-width: 58ch;
+    margin-bottom: 1.35rem !important;
+    color: var(--text-muted-color);
+    font-size: 1.08rem;
+    line-height: 1.72;
+  }
+
+  body:has(main > article[data-toc]) article.px-1 > header .preview-img,
+  body:has(main > article[data-toc]) article.px-1 > header .preview-img img {
+    border-radius: 1.35rem;
+  }
+
+  body:has(main > article[data-toc]) article.px-1 > header .preview-img {
+    margin-top: 1.2rem;
+    box-shadow: 0 18px 50px rgba(15, 23, 42, 0.08);
+  }
+
+  body:has(main > article[data-toc]) article.px-1 > header .post-meta {
+    display: grid;
+    gap: 0.7rem;
+  }
+
+  body:has(main > article[data-toc]) article.px-1 > header .post-meta > span,
+  body:has(main > article[data-toc]) article.px-1 > header .post-meta > div {
+    width: fit-content;
+  }
+
+  body:has(main > article[data-toc]) article.px-1 > header .post-meta .d-flex {
+    gap: 1.5rem;
+    align-items: flex-start !important;
+  }
+
+  body:has(main > article[data-toc]) article.px-1 > header .post-meta .d-flex > span,
+  body:has(main > article[data-toc]) article.px-1 > header .post-meta .d-flex > div {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem 0.9rem;
+  }
+
+  body:has(main > article[data-toc]) article.px-1 > .content {
+    margin-top: 2.2rem;
+  }
+
+  body:has(main > article[data-toc]) article.px-1 > .content > p:first-child {
+    font-size: 1.1rem;
+    line-height: 1.85;
+  }
+
+  body:has(main > article[data-toc]) article.px-1 > .content > p:first-child::first-letter {
+    margin-right: 0.08em;
+    color: var(--heading-color);
+    font-size: 3.2rem;
+    font-weight: 700;
+    line-height: 0.9;
+    float: left;
+  }
+
+  body:has(main > article[data-toc]) #toc-bar {
+    margin: 0 0 1.25rem;
+    border: 1px solid var(--main-border-color);
+    border-radius: 0.95rem;
+    background: color-mix(in srgb, var(--card-bg) 96%, transparent);
+  }
+
+  body:has(main > article[data-toc]) #toc-solo-trigger {
+    margin-bottom: 1rem;
+    border-radius: 999px;
+    padding: 0.25rem 0.35rem;
+  }
+
+  body:has(main > article[data-toc]) .post-tail-wrapper {
+    margin-top: 4rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--main-border-color);
+    border-bottom: 0;
+  }
+
+  body:has(main > article[data-toc]) .post-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.55rem;
+    align-items: center;
+  }
+
+  body:has(main > article[data-toc]) .post-tags .post-tag {
+    margin: 0;
+    padding: 0.38rem 0.72rem;
+    border-radius: 999px;
+    background: color-mix(in srgb, var(--card-bg) 94%, transparent);
+    box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--main-border-color) 84%, transparent);
+  }
+
+  body:has(main > article[data-toc]) .post-navigation {
+    margin-top: 2rem;
+    gap: 0.9rem;
+  }
+
+  body:has(main > article[data-toc]) .post-navigation .btn {
+    min-height: 7rem;
+    padding: 1rem 1.1rem;
+    border-radius: 1rem;
+    background: color-mix(in srgb, var(--card-bg) 96%, transparent);
+    box-shadow: 0 12px 30px rgba(15, 23, 42, 0.04);
+  }
+
+  body:has(main > article[data-toc]) .post-navigation p {
+    font-size: 1rem;
+    line-height: 1.45;
+  }
+
+  body:has(main > article[data-toc]) #related-posts {
+    margin-top: 2.5rem;
+  }
+
+  body:has(main > article[data-toc]) #related-posts > h3 {
+    margin-bottom: 1rem !important;
+    font-size: 1rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  body:has(main > article[data-toc]) #related-posts .card {
+    border-radius: 1rem;
+    background: color-mix(in srgb, var(--card-bg) 96%, transparent);
+    box-shadow: 0 12px 30px rgba(15, 23, 42, 0.04);
+  }
+
+  body:has(main > article[data-toc]) #related-posts .card-body {
+    padding: 1.1rem;
+  }
+}
+
 @media (max-width: 768px) {
   #sidebar {
     padding: 1rem 0.85rem 0.85rem;
@@ -435,5 +637,15 @@ article.px-1 > header {
 
   article.px-1 > header h1 {
     line-height: 1.18;
+  }
+
+  article.px-1 > header .post-meta .d-flex {
+    gap: 0.85rem;
+    align-items: flex-start !important;
+    flex-direction: column;
+  }
+
+  article.px-1 > .content > p:first-child::first-letter {
+    font-size: 2.4rem;
   }
 }
