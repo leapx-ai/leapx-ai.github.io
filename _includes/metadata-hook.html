@@ -1,0 +1,52 @@
+{% if page.mermaid %}
+  <style>
+    /* Keep Mermaid blocks from flashing raw source before the runtime renders them. */
+    pre > code.language-mermaid {
+      visibility: hidden;
+    }
+
+    /* Progressive enhancement: show a soft placeholder while the diagram is loading. */
+    @supports selector(pre:has(> code.language-mermaid)) {
+      pre:has(> code.language-mermaid) {
+        position: relative;
+        min-height: 12rem;
+      }
+
+      pre:has(> code.language-mermaid)::before {
+        content: "";
+        position: absolute;
+        inset: 1rem;
+        border-radius: 0.75rem;
+        background:
+          linear-gradient(
+            90deg,
+            rgba(127, 127, 127, 0.08) 25%,
+            rgba(127, 127, 127, 0.16) 37%,
+            rgba(127, 127, 127, 0.08) 63%
+          );
+        background-size: 400% 100%;
+        animation: mermaid-placeholder 1.4s ease infinite;
+      }
+
+      pre.mermaid[data-processed="true"] {
+        min-height: 0;
+      }
+    }
+
+    pre.mermaid svg {
+      display: block;
+      max-width: 100%;
+      height: auto;
+    }
+
+    @keyframes mermaid-placeholder {
+      0% {
+        background-position: 100% 50%;
+      }
+
+      100% {
+        background-position: 0 50%;
+      }
+    }
+  </style>
+{% endif %}
