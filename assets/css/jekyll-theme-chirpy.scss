@@ -1,0 +1,182 @@
+---
+---
+
+/* prettier-ignore */
+@use 'main
+{%- if jekyll.environment == 'production' -%}
+  .bundle
+{%- endif -%}
+';
+
+/* Intentional UI polish layer for this site. Keep overrides focused and easy to maintain. */
+
+:root {
+  --leapx-reading-width: 72ch;
+  --leapx-soft-shadow: 0 18px 40px rgba(15, 23, 42, 0.08);
+  --leapx-card-border: color-mix(in srgb, var(--main-border-color) 72%, transparent);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+#main-wrapper > .container {
+  max-width: 1500px;
+}
+
+main[aria-label='Main Content'] {
+  .content {
+    font-size: 1.03rem;
+    line-height: 1.85;
+    text-wrap: pretty;
+
+    > * {
+      max-width: var(--leapx-reading-width);
+    }
+
+    > .table-wrapper,
+    > .footnotes,
+    > .highlighter-rouge,
+    > div.highlighter-rouge,
+    > pre,
+    > .mermaid,
+    > ul,
+    > ol {
+      max-width: none;
+    }
+
+    p,
+    li {
+      color: var(--text-color);
+    }
+
+    p + p,
+    ul + p,
+    ol + p,
+    .highlighter-rouge + p,
+    .mermaid + p,
+    blockquote + p {
+      margin-top: 1rem;
+    }
+
+    h2,
+    h3,
+    h4 {
+      letter-spacing: -0.015em;
+      margin-top: 2.6rem;
+      margin-bottom: 0.9rem;
+      scroll-margin-top: 5rem;
+    }
+
+    h2 {
+      padding-bottom: 0.35rem;
+      border-bottom: 1px solid var(--main-border-color);
+    }
+
+    blockquote {
+      max-width: calc(var(--leapx-reading-width) - 2rem);
+      margin: 1.5rem 0;
+      padding: 1rem 1.1rem;
+      border-left-width: 0.3rem;
+      border-radius: 0 1rem 1rem 0;
+      background: color-mix(in srgb, var(--card-bg) 90%, var(--sidebar-bg) 10%);
+      box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--main-border-color) 75%, transparent);
+    }
+
+    code {
+      font-size: 0.92em;
+      border-radius: 0.45rem;
+    }
+
+    .highlighter-rouge,
+    div.highlighter-rouge,
+    pre {
+      border-radius: 1rem;
+    }
+
+    .highlighter-rouge,
+    div.highlighter-rouge {
+      box-shadow: 0 8px 30px rgba(15, 23, 42, 0.05);
+    }
+
+    .code-header {
+      border-top-left-radius: 1rem;
+      border-top-right-radius: 1rem;
+    }
+
+    pre.mermaid {
+      margin: 1.4rem auto;
+      padding: 1rem;
+      border-radius: 1rem;
+      background: color-mix(in srgb, var(--card-bg) 92%, transparent);
+      box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--main-border-color) 78%, transparent);
+      overflow-x: auto;
+    }
+
+    pre.mermaid svg {
+      margin: 0 auto;
+    }
+  }
+}
+
+article.px-1 > header {
+  margin-bottom: 2.25rem;
+
+  h1 {
+    letter-spacing: -0.03em;
+    line-height: 1.12;
+  }
+
+  .post-meta {
+    margin-top: 1.1rem;
+  }
+}
+
+#post-list {
+  .card-wrapper:not(:last-child) {
+    margin-bottom: 1.5rem;
+  }
+
+  .card {
+    overflow: hidden;
+    border: 1px solid var(--leapx-card-border);
+    border-radius: 1.25rem;
+    background: color-mix(in srgb, var(--card-bg) 94%, transparent);
+    box-shadow: 0 10px 35px rgba(15, 23, 42, 0.04);
+    transition:
+      transform 0.22s ease,
+      box-shadow 0.22s ease,
+      border-color 0.22s ease;
+  }
+
+  .card-wrapper:hover .card {
+    transform: translateY(-2px);
+    box-shadow: var(--leapx-soft-shadow);
+    border-color: color-mix(in srgb, var(--link-color) 28%, var(--main-border-color));
+  }
+
+  .card .card-body .card-title {
+    line-height: 1.25;
+    letter-spacing: -0.02em;
+  }
+
+  .card .card-body .card-text.content p {
+    -webkit-line-clamp: 3;
+  }
+}
+
+#toc-wrapper,
+#panel-wrapper .access {
+  border-radius: 1rem;
+}
+
+@media (max-width: 768px) {
+  main[aria-label='Main Content'] .content {
+    font-size: 1rem;
+    line-height: 1.78;
+  }
+
+  article.px-1 > header h1 {
+    line-height: 1.18;
+  }
+}
