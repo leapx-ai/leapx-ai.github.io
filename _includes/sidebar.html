@@ -2,19 +2,12 @@
 
 <aside aria-label="Sidebar" id="sidebar" class="d-flex flex-column align-items-end">
   <header class="profile-wrapper">
-    <div class="brand-mark">LEAPX NOTES</div>
-
     <a class="site-title d-block" href="{{ '/' | relative_url }}">{{ site.title }}</a>
     <p class="site-subtitle mb-0">{{ site.tagline }}</p>
-
-    {% if site.description %}
-      <p class="site-intro mb-0">{{ site.description }}</p>
-    {% endif %}
   </header>
   <!-- .profile-wrapper -->
 
   <nav class="flex-column w-100 ps-0">
-    <div class="sidebar-section-label">Navigate</div>
     <ul class="nav">
       <!-- home -->
       <li class="nav-item{% if page.layout == 'home' %}{{ " active" }}{% endif %}">
@@ -39,7 +32,6 @@
   </nav>
 
   <div class="sidebar-footer w-100">
-    <div class="sidebar-section-label">Connect</div>
     <div class="sidebar-bottom d-flex flex-wrap align-items-center w-100">
       {% unless site.theme_mode %}
         <button type="button" class="btn btn-link nav-link" aria-label="Switch Mode" id="mode-toggle">

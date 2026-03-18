@@ -49,18 +49,11 @@ refactor: true
 
 <section class="home-hero">
   <div class="home-hero-copy">
-    <p class="home-hero-kicker">Knowledge Base</p>
     <h1>{{ site.title }}</h1>
     <p class="home-hero-tagline">{{ site.tagline }}</p>
     {% if site.description %}
       <p class="home-hero-description">{{ site.description }}</p>
     {% endif %}
-  </div>
-
-  <div class="home-hero-links">
-    <a href="{{ '/archives/' | relative_url }}">Archives</a>
-    <a href="{{ '/categories/' | relative_url }}">Categories</a>
-    <a href="{{ '/tags/' | relative_url }}">Tags</a>
   </div>
 </section>
 
