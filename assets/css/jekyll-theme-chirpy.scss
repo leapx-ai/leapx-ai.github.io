@@ -1,11 +1,15 @@
----
----
+--- ---
 
 /* prettier-ignore */
 @use 'main
-{%- if jekyll.environment == 'production' -%}
-  .bundle
-{%- endif -%}
+ {
+  %- if jekyll.environment=='production' -%
+}
+
+.bundle {
+  %- endif -%
+}
+
 ';
 
 /* Intentional UI polish layer for this site. Keep overrides focused and easy to maintain. */
@@ -44,7 +48,7 @@ html {
   scroll-behavior: smooth;
 }
 
-#main-wrapper > .container {
+#main-wrapper>.container {
   max-width: 1500px;
 }
 
@@ -54,29 +58,29 @@ main[aria-label='Main Content'] {
     line-height: 1.9;
     text-wrap: pretty;
 
-    > * {
+    >* {
       max-width: var(--leapx-reading-width);
     }
 
-    > .footnotes,
-    > .highlighter-rouge,
-    > div.highlighter-rouge,
-    > pre,
-    > .mermaid,
-    > ul,
-    > ol {
+    >.footnotes,
+    >.highlighter-rouge,
+    >div.highlighter-rouge,
+    >pre,
+    >.mermaid,
+    >ul,
+    >ol {
       max-width: none;
     }
 
-    > .table-wrapper {
+    >.table-wrapper {
       max-width: var(--leapx-reading-width);
     }
 
-    > .table-wrapper {
+    >.table-wrapper {
       overflow-x: auto;
     }
 
-    > .table-wrapper > table {
+    >.table-wrapper>table {
       min-width: 100%;
     }
 
@@ -95,12 +99,12 @@ main[aria-label='Main Content'] {
       color: var(--text-color);
     }
 
-    p + p,
-    ul + p,
-    ol + p,
-    .highlighter-rouge + p,
-    .mermaid + p,
-    blockquote + p {
+    p+p,
+    ul+p,
+    ol+p,
+    .highlighter-rouge+p,
+    .mermaid+p,
+    blockquote+p {
       margin-top: 1rem;
     }
 
@@ -173,7 +177,7 @@ main[aria-label='Main Content'] {
   }
 }
 
-article.px-1 > header {
+article.px-1>header {
   margin-bottom: 2.25rem;
 
   h1 {
@@ -414,7 +418,7 @@ article.px-1 > header {
     margin-left: 0 !important;
   }
 
-  body:has(main > article[data-toc]) #main-wrapper > .container {
+  body:has(main > article[data-toc]) #main-wrapper>.container {
     max-width: 1400px;
   }
 
@@ -456,13 +460,13 @@ article.px-1 > header {
     font-size: 0.92rem;
   }
 
-  body:has(main > article[data-toc]) article.px-1 > header {
+  body:has(main > article[data-toc]) article.px-1>header {
     margin-bottom: 2.6rem;
     padding: 0.7rem 0 1.8rem;
     border-bottom: 1px solid var(--main-border-color);
   }
 
-  body:has(main > article[data-toc]) article.px-1 > header h1 {
+  body:has(main > article[data-toc]) article.px-1>header h1 {
     max-width: 18ch;
     margin-bottom: 0.75rem;
     font-size: clamp(2.2rem, 4vw, 3.4rem);
@@ -470,7 +474,7 @@ article.px-1 > header {
     letter-spacing: -0.05em;
   }
 
-  body:has(main > article[data-toc]) article.px-1 > header .post-desc {
+  body:has(main > article[data-toc]) article.px-1>header .post-desc {
     max-width: 58ch;
     margin-bottom: 1.35rem !important;
     color: var(--text-muted-color);
@@ -478,48 +482,48 @@ article.px-1 > header {
     line-height: 1.72;
   }
 
-  body:has(main > article[data-toc]) article.px-1 > header .preview-img,
-  body:has(main > article[data-toc]) article.px-1 > header .preview-img img {
+  body:has(main > article[data-toc]) article.px-1>header .preview-img,
+  body:has(main > article[data-toc]) article.px-1>header .preview-img img {
     border-radius: 1.35rem;
   }
 
-  body:has(main > article[data-toc]) article.px-1 > header .preview-img {
+  body:has(main > article[data-toc]) article.px-1>header .preview-img {
     margin-top: 1.2rem;
     box-shadow: 0 18px 50px rgba(15, 23, 42, 0.08);
   }
 
-  body:has(main > article[data-toc]) article.px-1 > header .post-meta {
+  body:has(main > article[data-toc]) article.px-1>header .post-meta {
     display: grid;
     gap: 0.7rem;
   }
 
-  body:has(main > article[data-toc]) article.px-1 > header .post-meta > span,
-  body:has(main > article[data-toc]) article.px-1 > header .post-meta > div {
+  body:has(main > article[data-toc]) article.px-1>header .post-meta>span,
+  body:has(main > article[data-toc]) article.px-1>header .post-meta>div {
     width: fit-content;
   }
 
-  body:has(main > article[data-toc]) article.px-1 > header .post-meta .d-flex {
+  body:has(main > article[data-toc]) article.px-1>header .post-meta .d-flex {
     gap: 1.5rem;
     align-items: flex-start !important;
   }
 
-  body:has(main > article[data-toc]) article.px-1 > header .post-meta .d-flex > span,
-  body:has(main > article[data-toc]) article.px-1 > header .post-meta .d-flex > div {
+  body:has(main > article[data-toc]) article.px-1>header .post-meta .d-flex>span,
+  body:has(main > article[data-toc]) article.px-1>header .post-meta .d-flex>div {
     display: flex;
     flex-wrap: wrap;
     gap: 0.4rem 0.9rem;
   }
 
-  body:has(main > article[data-toc]) article.px-1 > .content {
+  body:has(main > article[data-toc]) article.px-1>.content {
     margin-top: 2.2rem;
   }
 
-  body:has(main > article[data-toc]) article.px-1 > .content > p:first-child {
+  body:has(main > article[data-toc]) article.px-1>.content>p:first-child {
     font-size: 1.1rem;
     line-height: 1.85;
   }
 
-  body:has(main > article[data-toc]) article.px-1 > .content > p:first-child::first-letter {
+  body:has(main > article[data-toc]) article.px-1>.content>p:first-child::first-letter {
     margin-right: 0.08em;
     color: var(--heading-color);
     font-size: 3.2rem;
@@ -585,7 +589,7 @@ article.px-1 > header {
     margin-top: 2.5rem;
   }
 
-  body:has(main > article[data-toc]) #related-posts > h3 {
+  body:has(main > article[data-toc]) #related-posts>h3 {
     margin-bottom: 1rem !important;
     font-size: 1rem;
     letter-spacing: 0.08em;
@@ -606,8 +610,8 @@ article.px-1 > header {
 @media (min-width: 1200px) {
   body:has(main > article[data-toc]) main[aria-label='Main Content'] {
     flex: 0 0 74%;
-    width: 74%;
-    max-width: 74%;
+    // width: 74%;
+    // max-width: 74%;
   }
 
   body:has(main > article[data-toc]) #panel-wrapper {
@@ -657,17 +661,17 @@ article.px-1 > header {
     line-height: 1.78;
   }
 
-  article.px-1 > header h1 {
+  article.px-1>header h1 {
     line-height: 1.18;
   }
 
-  article.px-1 > header .post-meta .d-flex {
+  article.px-1>header .post-meta .d-flex {
     gap: 0.85rem;
     align-items: flex-start !important;
     flex-direction: column;
   }
 
-  article.px-1 > .content > p:first-child::first-letter {
+  article.px-1>.content>p:first-child::first-letter {
     font-size: 2.4rem;
   }
 }
