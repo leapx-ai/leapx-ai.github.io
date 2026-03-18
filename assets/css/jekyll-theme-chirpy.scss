@@ -83,7 +83,7 @@ main[aria-label='Main Content'] {
     hr {
       display: block;
       width: 100%;
-      max-width: var(--leapx-reading-width);
+      max-width: none;
       margin-left: 0;
       margin-right: auto;
       margin-top: 2rem;
@@ -400,6 +400,8 @@ article.px-1 > header {
 
   .nav-item.active .nav-link,
   .nav-link:hover {
+    padding-left: 0.8rem;
+    padding-right: 0.8rem;
     color: var(--sidebar-active-color);
     background: color-mix(in srgb, var(--sidebar-hover-bg) 72%, transparent);
   }
