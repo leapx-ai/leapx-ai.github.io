@@ -610,8 +610,6 @@ article.px-1>header {
 @media (min-width: 1200px) {
   body:has(main > article[data-toc]) main[aria-label='Main Content'] {
     flex: 0 0 74%;
-    // width: 74%;
-    // max-width: 74%;
   }
 
   body:has(main > article[data-toc]) #panel-wrapper {
