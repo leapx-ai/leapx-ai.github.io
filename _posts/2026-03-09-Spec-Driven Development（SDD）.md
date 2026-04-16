@@ -3,7 +3,7 @@ layout: post
 title: "Spec-Driven Development"
 date: 2026-03-09 21:13:08 +0800
 categories: [SDD]
-tags: [SDD]
+tags: []
 ---
 
 # Spec-Driven Development（SDD）
