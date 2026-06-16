@@ -19,6 +19,8 @@
   --leapx-muted: #6b7280;
   --leapx-link: #374151;
   --leapx-quiet-bg: rgba(15, 23, 42, 0.025);
+  --leapx-code-bg: #eef2f6;
+  --leapx-code-border: rgba(15, 23, 42, 0.12);
   --leapx-code-header-bg: #e8edf3;
 }
 
@@ -61,7 +63,9 @@
   --leapx-paper-surface: #202124;
   --leapx-paper-border: rgba(255, 255, 255, 0.08);
   --leapx-quiet-bg: rgba(255, 255, 255, 0.035);
-  --leapx-code-header-bg: #242528;
+  --leapx-code-bg: #1f2023;
+  --leapx-code-border: rgba(255, 255, 255, 0.1);
+  --leapx-code-header-bg: #292a2e;
   --leapx-body-bg-image: radial-gradient(circle at 50% 0, rgba(255, 255, 255, 0.035), transparent 34rem);
 }
 
@@ -199,18 +203,33 @@ main[aria-label='Main Content'] {
     div.highlighter-rouge,
     .highlight,
     div[class^='language-'] {
-      background: var(--leapx-paper-surface);
-      box-shadow: inset 0 0 0 1px var(--main-border-color);
+      background: var(--leapx-code-bg);
+      box-shadow: inset 0 0 0 1px var(--leapx-code-border);
     }
 
     .highlighter-rouge,
     div.highlighter-rouge {
-      box-shadow: inset 0 0 0 1px var(--main-border-color);
+      overflow: hidden;
+      box-shadow: inset 0 0 0 1px var(--leapx-code-border);
     }
 
     .code-header {
       background: var(--leapx-code-header-bg);
+      border-bottom: 1px solid var(--leapx-code-border);
+      border-radius: 0.65rem 0.65rem 0 0;
       color: var(--text-muted-color);
+      padding-right: 0.35rem;
+    }
+
+    .code-header button {
+      align-self: center;
+      height: calc(100% - 4px);
+      margin: 2px 0;
+    }
+
+    .code-header+.highlight,
+    .code-header+div[class^='language-'] {
+      box-shadow: none;
     }
 
     pre.mermaid {
@@ -248,17 +267,19 @@ header .post-desc {
 
 @media (min-width: 992px) {
   body:has(main > article[data-toc]) main[aria-label='Main Content'] {
-    flex: 0 0 100%;
-    max-width: 100%;
+    flex: 0 0 72% !important;
+    max-width: 72% !important;
   }
 
   body:has(main > article[data-toc]) #panel-wrapper {
-    display: none !important;
+    display: block !important;
+    flex: 0 0 28% !important;
+    max-width: 28% !important;
   }
 
   body:has(main > article[data-toc]) #tail-wrapper {
-    flex: 0 0 100%;
-    max-width: 100%;
+    flex: 0 0 72% !important;
+    max-width: 72% !important;
   }
 }
 
