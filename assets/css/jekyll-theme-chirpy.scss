@@ -11,16 +11,15 @@
 /* Site theme layer: keep Chirpy's layout, only tune atmosphere and reading rhythm. */
 
 :root {
-  --leapx-reading-width: 68ch;
   --leapx-paper: #ffffff;
   --leapx-paper-bg: #fafafa;
-  --leapx-paper-surface: #f6f7f8;
+  --leapx-paper-surface: #f2f5f9;
   --leapx-paper-border: rgba(15, 23, 42, 0.09);
   --leapx-ink: #1f2933;
   --leapx-muted: #6b7280;
   --leapx-link: #374151;
   --leapx-quiet-bg: rgba(15, 23, 42, 0.025);
-  --leapx-code-header-bg: #f1f3f5;
+  --leapx-code-header-bg: #e8edf3;
 }
 
 @mixin leapx-light-theme {
@@ -111,22 +110,7 @@ main[aria-label='Main Content'] {
     line-height: 1.96;
     text-wrap: pretty;
 
-    >* {
-      max-width: var(--leapx-reading-width);
-    }
-
-    >.footnotes,
-    >.highlighter-rouge,
-    >div.highlighter-rouge,
-    >pre,
-    >.mermaid,
-    >ul,
-    >ol {
-      max-width: none;
-    }
-
     >.table-wrapper {
-      max-width: var(--leapx-reading-width);
       overflow-x: auto;
     }
 
@@ -189,7 +173,6 @@ main[aria-label='Main Content'] {
     }
 
     blockquote {
-      max-width: calc(var(--leapx-reading-width) - 2rem);
       margin: 1.4rem 0;
       padding: 0.9rem 1rem;
       border-left-width: 0.16rem;
@@ -217,11 +200,12 @@ main[aria-label='Main Content'] {
     .highlight,
     div[class^='language-'] {
       background: var(--leapx-paper-surface);
+      box-shadow: inset 0 0 0 1px var(--main-border-color);
     }
 
     .highlighter-rouge,
     div.highlighter-rouge {
-      box-shadow: none;
+      box-shadow: inset 0 0 0 1px var(--main-border-color);
     }
 
     .code-header {
@@ -260,6 +244,22 @@ article.px-1>header {
 header .post-desc {
   color: var(--text-muted-color);
   line-height: 1.7;
+}
+
+@media (min-width: 992px) {
+  body:has(main > article[data-toc]) main[aria-label='Main Content'] {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  body:has(main > article[data-toc]) #panel-wrapper {
+    display: none !important;
+  }
+
+  body:has(main > article[data-toc]) #tail-wrapper {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
 }
 
 .home-hero {
