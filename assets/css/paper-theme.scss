@@ -386,24 +386,55 @@ footer a {
 
 .post-preview {
   border: 1px solid var(--main-border-color);
-  border-radius: 0;
-  box-shadow: none;
+  border-radius: 0 !important;
+  box-shadow: none !important;
   transition: background-color 0.3s ease;
 }
 
-.post-preview::before {
-  border-radius: 0;
-  background-color: transparent;
-  opacity: 0;
-  transition: none;
-}
-
-.post-preview:hover::before {
-  opacity: 0;
-  background-color: transparent;
+.post-preview::before,
+.post-preview::after {
+  display: none !important;
+  content: none !important;
+  background: none !important;
+  opacity: 0 !important;
 }
 
 .post-preview:hover {
+  background-color: var(--card-hovor-bg);
+}
+
+#post-list .card-wrapper.card {
+  border: 0 !important;
+  box-shadow: none !important;
+  background: none !important;
+}
+
+#post-list .card-wrapper.card::before,
+#post-list .card-wrapper.card::after {
+  display: none !important;
+  content: none !important;
+  background: none !important;
+  opacity: 0 !important;
+  border: 0 !important;
+}
+
+#post-list .card-wrapper a.post-preview {
+  border: 1px solid var(--main-border-color);
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  transition: background-color 0.3s ease;
+}
+
+#post-list .card-wrapper a.post-preview::before,
+#post-list .card-wrapper a.post-preview::after {
+  display: none !important;
+  content: none !important;
+  background: none !important;
+  opacity: 0 !important;
+  border: 0 !important;
+}
+
+#post-list .card-wrapper a.post-preview:hover {
   background-color: var(--card-hovor-bg);
 }
 
@@ -417,7 +448,7 @@ footer a {
 }
 
 #post-list .card-wrapper:not(:last-child) {
-  border-bottom: 1px solid var(--main-border-color);
+  border-bottom: 0;
   padding-bottom: 1.5rem;
 }
 
