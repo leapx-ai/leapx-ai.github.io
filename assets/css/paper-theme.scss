@@ -1,0 +1,722 @@
+---
+---
+
+/* Paper-like theme overrides for Chirpy */
+/* This file overrides theme variables and styles for a clean, paper-like reading experience */
+
+/* ============================================
+   CSS VARIABLES OVERRIDE - Light Mode (Paper)
+   ============================================ */
+
+html[data-mode='light'],
+html:not([data-mode]) {
+  @media (prefers-color-scheme: light) {
+    /* Framework color - warm paper background */
+    --main-bg: #faf8f5;
+    --mask-bg: #d4d0c8;
+    --main-border-color: #e0dbd0;
+
+    /* Common color - ink-like text */
+    --text-color: #1a1a1a;
+    --text-muted-color: #6b6560;
+    --text-muted-highlight-color: #4a4538;
+    --heading-color: #111111;
+    --label-color: #5a5548;
+    --blockquote-border-color: #c8c0b0;
+    --blockquote-text-color: #5a5548;
+    --link-color: #6b3a1a;
+    --link-underline-color: #c8b898;
+    --button-bg: #f5f2ed;
+    --btn-border-color: #d8d2c8;
+    --btn-backtotop-color: #7a7568;
+    --btn-backtotop-border-color: #e0dbd0;
+    --checkbox-color: #b8b0a0;
+    --checkbox-checked-color: #8b4513;
+    --img-bg: radial-gradient(
+      circle,
+      #faf8f5 0%,
+      #f0ece4 100%
+    );
+    --shimmer-bg: linear-gradient(
+      90deg,
+      rgba(250, 248, 245, 0) 0%,
+      rgba(232, 228, 220, 1) 50%,
+      rgba(250, 248, 245, 0) 100%
+    );
+
+    /* Sidebar - subtle paper tone */
+    --site-title-color: #3a3530;
+    --site-subtitle-color: #6b6560;
+    --sidebar-bg: #f2efe8;
+    --sidebar-border-color: #e0dbd0;
+    --sidebar-muted-color: #5a5548;
+    --sidebar-active-color: #111111;
+    --sidebar-hover-bg: rgba(200, 190, 170, 0.3);
+    --sidebar-btn-bg: #faf8f5;
+    --sidebar-btn-color: #7a7568;
+    --avatar-border-color: #faf8f5;
+
+    /* Topbar */
+    --topbar-bg: rgba(250, 248, 245, 0.85);
+    --topbar-text-color: #3a3530;
+    --search-border-color: #e0dbd0;
+    --search-icon-color: #a09888;
+    --input-focus-border-color: #908880;
+
+    /* Home page */
+    --post-list-text-color: #4a4538;
+    --btn-patinator-text-color: #4a4538;
+    --btn-paginator-hover-color: #e8e2d8;
+
+    /* Posts - remove card effects, use subtle borders */
+    --toc-highlight: #6b3a1a;
+    --toc-popup-border-color: #c8c0b0;
+    --btn-share-color: #7a7568;
+    --btn-share-hover-color: #6b3a1a;
+    --card-bg: #faf8f5;
+    --card-hovor-bg: #e8e2d8;
+    --card-shadow: none;
+    --footnote-target-bg: #f0e8d0;
+    --tb-odd-bg: #f5f2ed;
+    --tb-border-color: #e0dbd0;
+    --dash-color: #c0b8a8;
+    --kbd-wrap-color: #c0b8a8;
+    --kbd-text-color: var(--text-color);
+    --kbd-bg-color: #f5f2ed;
+    --prompt-text-color: rgba(50, 46, 40, 0.85);
+    --prompt-tip-bg: rgba(160, 210, 160, 0.25);
+    --prompt-tip-icon-color: #3a7a3a;
+    --prompt-info-bg: rgba(180, 200, 230, 0.35);
+    --prompt-info-icon-color: #4a6a8a;
+    --prompt-warning-bg: rgba(230, 220, 180, 0.45);
+    --prompt-warning-icon-color: #a07000;
+    --prompt-danger-bg: rgba(230, 190, 190, 0.45);
+    --prompt-danger-icon-color: #903030;
+
+    /* Tags */
+    --tag-border: #c8c0b0;
+    --tag-shadow: none;
+    --tag-hover: #e8e2d8;
+    --search-tag-bg: #f5f2ed;
+
+    /* Categories */
+    --categories-border: rgba(100, 90, 70, 0.25);
+    --categories-hover-bg: #e8e2d8;
+    --categories-icon-hover-color: #4a4538;
+
+    /* Archive */
+    --timeline-color: rgba(100, 90, 70, 0.2);
+    --timeline-node-bg: #a09888;
+    --timeline-year-dot-color: #faf8f5;
+
+    /* Code - warm light background */
+    --language-border-color: #d8d2c8;
+    --highlight-bg-color: #f5f2ed;
+    --highlighter-rouge-color: #5a4a38;
+    --highlight-lineno-color: #908880;
+    --inline-code-bg: rgba(100, 90, 70, 0.1);
+    --code-color: #3a3530;
+    --code-header-text-color: #908880;
+    --code-header-muted-color: #d0c8b8;
+    --code-header-icon-color: #b0a898;
+    --clipboard-checked-color: #3a7a3a;
+  }
+}
+
+/* ============================================
+   CSS VARIABLES OVERRIDE - Dark Mode (Night Reading)
+   ============================================ */
+
+html[data-mode='dark'] {
+  @media (prefers-color-scheme: dark) {
+    /* Framework color - warm dark background */
+    --main-bg: #1e1c1a;
+    --mask-bg: #3a3835;
+    --main-border-color: #3a3835;
+
+    /* Common color - warm light text */
+    --text-color: #d8d2c8;
+    --text-muted-color: #a09888;
+    --text-muted-highlight-color: #c8c2b8;
+    --heading-color: #e8e2d8;
+    --label-color: #b0a898;
+    --blockquote-border-color: #5a5550;
+    --blockquote-text-color: #a09888;
+    --link-color: #e0b080;
+    --link-underline-color: #8a7a60;
+    --button-bg: #2a2825;
+    --btn-border-color: #4a4540;
+    --btn-backtotop-color: #d8d2c8;
+    --btn-backtotop-border-color: #4a4540;
+    --card-header-bg: #2a2825;
+    --checkbox-color: #8a8580;
+    --checkbox-checked-color: #e0b080;
+    --img-bg: radial-gradient(circle, #1e1c1a 0%, #2a2825 100%);
+    --shimmer-bg: linear-gradient(
+      90deg,
+      rgba(30, 28, 26, 0) 0%,
+      rgba(80, 75, 68, 0.4) 50%,
+      rgba(30, 28, 26, 0) 100%
+    );
+
+    /* Sidebar */
+    --site-title-color: #b0a898;
+    --site-subtitle-color: #a09888;
+    --sidebar-bg: #252320;
+    --sidebar-border-color: #4a4540;
+    --sidebar-muted-color: #a09888;
+    --sidebar-active-color: #e8e2d8;
+    --sidebar-hover-bg: #2a2825;
+    --sidebar-btn-bg: #2a2825;
+    --sidebar-btn-color: #a09888;
+    --avatar-border-color: rgba(220, 214, 204, 0.9);
+
+    /* Topbar */
+    --topbar-bg: rgba(30, 28, 26, 0.64);
+    --topbar-text-color: #d8d2c8;
+    --search-border-color: #5a5550;
+    --search-icon-color: #8a8580;
+    --input-focus-border-color: #a09888;
+
+    /* Home page */
+    --post-list-text-color: #d8d2c8;
+    --btn-patinator-text-color: #d8d2c8;
+    --btn-paginator-hover-color: #4a4540;
+
+    /* Posts */
+    --toc-highlight: #e0b080;
+    --toc-popup-border-color: #5a5550;
+    --tag-hover: #4a4540;
+    --tb-odd-bg: #2a2825;
+    --tb-even-bg: #252320;
+    --tb-border-color: #4a4540;
+    --footnote-target-bg: #5a5038;
+    --btn-share-color: #a09888;
+    --btn-share-hover-color: #d8d2c8;
+    --card-bg: #252320;
+    --card-hovor-bg: #5a5550;
+    --card-shadow: none;
+    --kbd-wrap-color: #7a7570;
+    --kbd-text-color: #d8d2c8;
+    --kbd-bg-color: #2a2825;
+    --prompt-text-color: rgba(220, 214, 204, 0.85);
+    --prompt-tip-bg: rgba(50, 100, 50, 0.64);
+    --prompt-tip-icon-color: rgba(100, 200, 100, 0.81);
+    --prompt-info-bg: rgba(40, 60, 100, 0.8);
+    --prompt-info-icon-color: #8098b8;
+    --prompt-warning-bg: rgba(100, 90, 40, 0.88);
+    --prompt-warning-icon-color: rgba(220, 200, 120, 0.8);
+    --prompt-danger-bg: rgba(90, 40, 30, 0.8);
+    --prompt-danger-icon-color: #d08070;
+
+    /* Tags */
+    --tag-border: #5a5550;
+    --tag-shadow: none;
+    --dash-color: #7a7570;
+    --search-tag-bg: #2a2825;
+
+    /* Categories */
+    --categories-border: rgba(140, 130, 110, 0.5);
+    --categories-hover-bg: #4a4540;
+    --categories-icon-hover-color: #e8e2d8;
+
+    /* Archive */
+    --timeline-node-bg: #a09888;
+    --timeline-color: #5a5550;
+    --timeline-year-dot-color: #5a5550;
+
+    /* Code */
+    --language-border-color: #4a4540;
+    --highlight-bg-color: #1a1816;
+    --highlighter-rouge-color: #e0d8c8;
+    --highlight-lineno-color: #8a8580;
+    --inline-code-bg: rgba(220, 214, 204, 0.08);
+    --code-color: #d8d2c8;
+    --code-header-text-color: #7a7570;
+    --code-header-muted-color: #4a4540;
+    --code-header-icon-color: #5a5550;
+    --clipboard-checked-color: #3a7a3a;
+    --filepath-text-color: #b0a898;
+  }
+}
+
+/* ============================================
+   TYPOGRAPHY - Paper-like reading experience
+   ============================================ */
+
+body {
+  font-family: 'Noto Sans SC', 'Source Sans Pro', 'Microsoft Yahei', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Headings use serif for elegance */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.site-title,
+.card-title,
+.post-title,
+.page-title {
+  font-family: 'Noto Serif SC', 'Lato', 'Microsoft Yahei', serif;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+/* Content text uses slightly larger size for comfort reading */
+.content {
+  font-size: 1.05rem;
+  line-height: 1.85;
+  color: var(--text-color);
+}
+
+@media (min-width: 1200px) {
+  .content {
+    font-size: 1.08rem;
+    line-height: 1.9;
+  }
+}
+
+/* Paragraph spacing for better readability */
+.content p {
+  margin-bottom: 1.25rem;
+  text-align: justify;
+  word-break: normal;
+  overflow-wrap: break-word;
+  color: var(--text-color);
+}
+
+/* Strong / bold text */
+.content strong,
+.content b {
+  color: var(--heading-color);
+  font-weight: 600;
+}
+
+/* Lists */
+.content ol li,
+.content ul li {
+  color: var(--text-color);
+}
+
+/* Emphasis */
+.content em,
+.content i {
+  color: var(--text-color);
+}
+
+/* Links in content - clearer */
+.content a:not(.img-link):not(.popup) {
+  color: var(--link-color);
+  font-weight: 500;
+}
+
+/* Headings in content */
+.content h1,
+.content h2,
+.content h3,
+.content h4,
+.content h5,
+.content h6 {
+  color: var(--heading-color);
+  font-weight: 700;
+}
+
+/* Post meta text */
+.post-meta {
+  color: var(--text-muted-color);
+}
+
+.post-meta em,
+.post-meta time,
+.post-meta a {
+  color: var(--text-muted-highlight-color);
+}
+
+/* Card text */
+.card-text {
+  color: var(--post-list-text-color);
+}
+
+/* Post description */
+.post-desc {
+  color: var(--text-muted-color);
+}
+
+/* Blockquote text */
+blockquote {
+  color: var(--blockquote-text-color);
+}
+
+/* Table text */
+.table-wrapper td,
+.table-wrapper th {
+  color: var(--text-color);
+}
+
+/* Inline code */
+.content code:not(.highlight code) {
+  border-radius: 0;
+  padding: 0.15em 0.4em;
+  font-size: 0.9em;
+  color: var(--code-color);
+  background-color: var(--inline-code-bg);
+}
+
+/* Highlight code */
+.highlight code {
+  color: var(--code-color);
+}
+
+/* Footer text */
+footer {
+  color: var(--text-muted-color);
+}
+
+footer a {
+  color: var(--text-muted-highlight-color);
+}
+
+/* ============================================
+   CARDS & POST PREVIEW - Remove shadows, use borders
+   ============================================ */
+
+.post-preview {
+  border: 1px solid var(--main-border-color);
+  border-radius: 0;
+  box-shadow: none;
+  transition: background-color 0.3s ease;
+}
+
+.post-preview::before {
+  border-radius: 0;
+}
+
+.post-preview:hover::before {
+  opacity: 0.05;
+}
+
+#post-list .card {
+  border: 0;
+  background: none;
+}
+
+#post-list .card-wrapper {
+  margin-bottom: 1.5rem;
+}
+
+#post-list .card-wrapper:not(:last-child) {
+  border-bottom: 1px solid var(--main-border-color);
+  padding-bottom: 1.5rem;
+}
+
+/* Remove image radius for clean paper look */
+.preview-img,
+.preview-img img {
+  border-radius: 0;
+}
+
+/* ============================================
+   SIDEBAR - Minimal, clean
+   ============================================ */
+
+#sidebar {
+  border-right: 1px solid var(--sidebar-border-color);
+}
+
+#sidebar .site-title {
+  font-family: 'Noto Serif SC', 'Lato', 'Microsoft Yahei', serif;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+}
+
+#sidebar .nav-link {
+  border-radius: 0;
+  font-weight: 500;
+}
+
+#sidebar .sidebar-bottom a,
+#sidebar #mode-toggle {
+  border-radius: 0;
+}
+
+/* ============================================
+   TOPBAR - Clean, minimal
+   ============================================ */
+
+#topbar-wrapper {
+  border-bottom: 1px solid var(--main-border-color);
+}
+
+/* ============================================
+   TAGS - Simple pill style
+   ============================================ */
+
+.post-tag {
+  border-radius: 0;
+  background: none;
+  border: 1px solid var(--tag-border);
+  transition: all 0.2s ease;
+}
+
+.post-tag:hover {
+  background: var(--tag-hover);
+}
+
+/* ============================================
+   CODE BLOCKS - Warm, paper-like, all right angles
+   ============================================ */
+
+/* Outer container: force right angles */
+div[class^='language-'] {
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  border: 1px solid var(--language-border-color);
+}
+
+/* Override the theme's responsive border-radius for code blocks in content */
+.content > div[class^='language-'] {
+  border-radius: 0 !important;
+}
+
+/* Inner highlight block: force right angles */
+.highlight {
+  border-radius: 0 !important;
+  border: 1px solid var(--language-border-color);
+}
+
+/* When highlight is inside a language wrapper, remove double border */
+div[class^='language-'] .highlight {
+  border: 0;
+  border-radius: 0 !important;
+}
+
+/* Code header: force right angles */
+.code-header {
+  border-radius: 0 !important;
+}
+
+/* Code header buttons: force right angles */
+.code-header button {
+  border-radius: 0 !important;
+}
+
+/* Inline code */
+.content code:not(.highlight code) {
+  border-radius: 0;
+  padding: 0.15em 0.4em;
+  font-size: 0.9em;
+}
+
+/* ============================================
+   BLOCKQUOTE - Elegant left border
+   ============================================ */
+
+blockquote {
+  border-left: 2px solid var(--blockquote-border-color);
+  padding-left: 1.25rem;
+  font-style: italic;
+  background: none;
+}
+
+blockquote[class^='prompt-'] {
+  border-radius: 0;
+  border-left: 3px solid;
+}
+
+blockquote.prompt-tip {
+  border-left-color: var(--prompt-tip-icon-color);
+}
+
+blockquote.prompt-info {
+  border-left-color: var(--prompt-info-icon-color);
+}
+
+blockquote.prompt-warning {
+  border-left-color: var(--prompt-warning-icon-color);
+}
+
+blockquote.prompt-danger {
+  border-left-color: var(--prompt-danger-icon-color);
+}
+
+/* ============================================
+   TABLES - Clean, minimal
+   ============================================ */
+
+.table-wrapper > table {
+  border-collapse: collapse;
+}
+
+.table-wrapper > table thead {
+  border-bottom: 2px solid var(--tb-border-color);
+}
+
+.table-wrapper > table tbody tr {
+  border-bottom: 1px solid var(--tb-border-color);
+}
+
+/* ============================================
+   POST NAVIGATION - Simple buttons
+   ============================================ */
+
+.post-navigation .btn {
+  border-radius: 0;
+  border: 1px solid var(--btn-border-color);
+}
+
+.post-navigation .btn:first-child {
+  border-radius: 0;
+}
+
+.post-navigation .btn:last-child {
+  border-radius: 0;
+}
+
+/* ============================================
+   PAGINATION - Minimal
+   ============================================ */
+
+.pagination .page-link {
+  border-radius: 0;
+  border: 0;
+}
+
+.pagination .page-item:not(.active) .page-link:hover {
+  box-shadow: none;
+  background: var(--btn-paginator-hover-color);
+}
+
+/* ============================================
+   RELATED POSTS - Clean cards
+   ============================================ */
+
+#related-posts .card {
+  border: 1px solid var(--main-border-color);
+  border-radius: 0;
+  box-shadow: none;
+}
+
+/* ============================================
+   TOC - Clean panel
+   ============================================ */
+
+#toc-wrapper > * {
+  border: 1px solid var(--main-border-color);
+  border-radius: 0;
+}
+
+/* ============================================
+   DIALOG / POPUP - Clean
+   ============================================ */
+
+#toc-popup {
+  border-radius: 0;
+  border: 1px solid var(--toc-popup-border-color);
+}
+
+/* ============================================
+   KBD - Simple
+   ============================================ */
+
+kbd {
+  border-radius: 0;
+  box-shadow: none;
+  border: 1px solid var(--kbd-wrap-color);
+}
+
+/* ============================================
+   HOME HERO - Paper style
+   ============================================ */
+
+.home-hero {
+  background: none;
+  border-bottom: 1px solid var(--main-border-color);
+  padding: 2rem 1rem;
+  margin-bottom: 1rem;
+}
+
+.home-hero h1 {
+  font-family: 'Noto Serif SC', 'Lato', 'Microsoft Yahei', serif;
+  font-weight: 700;
+  font-size: 2rem;
+  color: var(--heading-color);
+  margin-bottom: 0.5rem;
+}
+
+.home-hero .home-hero-tagline {
+  font-size: 1.1rem;
+  color: var(--text-muted-color);
+  font-style: italic;
+}
+
+.home-hero .home-hero-description {
+  font-size: 0.95rem;
+  color: var(--text-muted-color);
+  margin-top: 0.5rem;
+}
+
+/* ============================================
+   FOOTER - Minimal separator
+   ============================================ */
+
+footer {
+  border-top: 1px solid var(--main-border-color);
+  background: var(--main-bg);
+}
+
+/* ============================================
+   SCROLLBAR - Subtle
+   ============================================ */
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--main-border-color);
+  border-radius: 0;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--text-muted-color);
+}
+
+/* ============================================
+   SELECTION - Warm highlight
+   ============================================ */
+
+::selection {
+  background: rgba(139, 69, 19, 0.15);
+  color: inherit;
+}
+
+/* ============================================
+   DARK MODE SPECIFIC ADJUSTMENTS
+   ============================================ */
+
+html[data-mode='dark'] ::selection {
+  background: rgba(212, 165, 116, 0.2);
+}
+
+/* ============================================
+   RESPONSIVE ADJUSTMENTS
+   ============================================ */
+
+@media (max-width: 991.98px) {
+  .home-hero h1 {
+    font-size: 1.6rem;
+  }
+
+  .content {
+    font-size: 1rem;
+    line-height: 1.8;
+  }
+}

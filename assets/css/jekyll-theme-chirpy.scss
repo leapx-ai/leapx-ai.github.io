@@ -7,3 +7,7 @@
   .bundle
 {%- endif -%}
 ';
+
+/* Paper-like theme overrides */
+@use 'paper-theme';
+

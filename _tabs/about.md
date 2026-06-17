@@ -61,21 +61,22 @@ order: 4
     text-align: center;
     padding: 3rem 1rem 2.5rem;
     margin-bottom: 2rem;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    border-radius: 1rem;
-    color: #fff;
+    border-bottom: 1px solid var(--main-border-color);
+    color: var(--heading-color);
   }
 
   .hero-title {
+    font-family: 'Noto Serif SC', 'Lato', 'Microsoft Yahei', serif;
     font-size: 2.5rem;
     font-weight: 700;
     margin-bottom: 0.5rem;
     letter-spacing: 0.05em;
+    color: var(--heading-color);
   }
 
   .hero-subtitle {
     font-size: 1.15rem;
-    opacity: 0.9;
+    color: var(--text-muted-color);
     font-weight: 300;
   }
 
@@ -89,18 +90,19 @@ order: 4
   }
 
   .section-title {
+    font-family: 'Noto Serif SC', 'Lato', 'Microsoft Yahei', serif;
     font-size: 1.4rem;
     font-weight: 600;
     margin-bottom: 1rem;
     padding-bottom: 0.5rem;
-    border-bottom: 2px solid #e9ecef;
-    color: #343a40;
+    border-bottom: 1px solid var(--main-border-color);
+    color: var(--heading-color);
   }
 
   .section-text {
     font-size: 1rem;
-    line-height: 1.8;
-    color: #495057;
+    line-height: 1.85;
+    color: var(--text-color);
     margin-bottom: 1rem;
   }
 
@@ -112,20 +114,19 @@ order: 4
   .qrcode-img {
     width: 220px;
     height: 220px;
-    border-radius: 1rem;
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+    border: 1px solid var(--main-border-color);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
   }
 
   .qrcode-img:hover {
     transform: translateY(-4px);
-    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.18);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
   }
 
   .qrcode-caption {
     margin-top: 0.75rem;
     font-size: 0.95rem;
-    color: #6c757d;
+    color: var(--text-muted-color);
   }
 
   .contact-list {
@@ -140,23 +141,23 @@ order: 4
     gap: 0.75rem;
     padding: 0.6rem 0;
     font-size: 1rem;
-    color: #495057;
+    color: var(--text-color);
   }
 
   .contact-list li i {
     width: 1.5rem;
     text-align: center;
-    color: #667eea;
+    color: var(--text-muted-color);
   }
 
   .contact-list a {
-    color: #667eea;
+    color: var(--link-color);
     text-decoration: none;
     transition: color 0.2s;
   }
 
   .contact-list a:hover {
-    color: #764ba2;
+    color: var(--link-color);
     text-decoration: underline;
   }
 
