@@ -393,10 +393,18 @@ footer a {
 
 .post-preview::before {
   border-radius: 0;
+  background-color: transparent;
+  opacity: 0;
+  transition: none;
 }
 
 .post-preview:hover::before {
-  opacity: 0.05;
+  opacity: 0;
+  background-color: transparent;
+}
+
+.post-preview:hover {
+  background-color: var(--card-hovor-bg);
 }
 
 #post-list .card {
